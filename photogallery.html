@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Photo Gallery</title>
+	<style type="text/css">
+		body{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 1%;
+	margin: 1%;
+
+}
+header{
+	height: 200px;
+	text-shadow: -2px -2px 2px #000fff;
+	background-color: #00000087;
+	font-family: serif;
+	color:#FFFFFF;
+	text-align: center;
+	margin: 2px auto;
+	padding-top: 15px;
+}
+h2{
+	text-shadow: -1px 1px 12px hsl(0deg 100% 50%);
+	font-family: serif;
+}
+.container {
+	display: inline-block;
+	margin: 2px;
+	margin-top: 8px;
+	border: solid 2px #FFFFFF;
+	width: 300px;
+	height: 300px;
+	border-radius: 10px;
+	cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.container .overlay {
+	background-color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000000;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    opacity: 0;
+    width: 300px;
+    height: 100px;
+    padding: 40% 0px;
+}
+.container:hover .overlay {
+	opacity: 0.5;
+}
+.container .text {
+	-webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+}
+.container .title {
+	font-size: 1.5em;
+    text-transform: uppercase;
+    opacity: 0;
+    transition-delay: 0.2s;
+    transition-duration: 0.3s;
+}
+.container:hover .title,
+.container:focus .title {
+	opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+}
+img{
+	height: 100%;
+	width: auto;
+}
+	</style>
+</head>
+<body background="https://i.ibb.co/3WWbXFp/bg.jpg">
+	<header>
+		<div>
+			<h1>This Photo Gallery is created by <strong>Ashutosh Rai</strong></h1>
+			<h2>Marvel Heroes</h2>
+			<h3>Hover over images to see their names</h3>
+		</div>
+	</header>
+	<div align="center" class="images">
+		<a href="https://i.ibb.co/SXfHSw1/iron-man.jpg" target="blank">
+		<div class="container">
+			<img src="https://i.ibb.co/SXfHSw1/iron-man.jpg" alt="iron-man" border="0">
+			<div class="overlay">
+				<div class="title text">Ironman</div>
+			</div>
+		</div>
+		</a>
+		<a href="https://i.ibb.co/K5w9HZR/thor.jpg" target="blank">
+		<div class="container">
+			<img src="https://i.ibb.co/K5w9HZR/thor.jpg" alt="thor" border="0">
+			<div class="overlay">
+				<div class="title text">Thor</div>
+			</div>
+		</div>
+		</a>
+		<a href="https://i.ibb.co/pxDKGQY/captain-america.jpg" target="blank">
+		<div class="container">
+			<img src="https://i.ibb.co/pxDKGQY/captain-america.jpg" alt="Captain America" border="0">
+			<div class="overlay">
+				<div class="title text">Captain America</div>
+			</div>
+		</div>
+		</a>
+		<a href="https://i.ibb.co/sKCFcgx/dr-strange.jpg" target="blank">
+		<div class="container">
+			<img src="https://i.ibb.co/sKCFcgx/dr-strange.jpg" alt="Doctor Strange" border="0">
+			<div class="overlay">
+				<div class="title text">Doctor Strange</div>
+			</div>
+		</div>
+		</a>
+		<a href="https://i.ibb.co/gvMdKDC/spidy.jpg" target="blank">
+		<div class="container">
+			<img src="https://i.ibb.co/gvMdKDC/spidy.jpg" alt="Spiderman" border="0">
+			<div class="overlay">
+				<div class="title text">Spiderman</div>
+			</div>
+		</div>
+		</a>
+		<a href="https://i.ibb.co/dPV7mPh/hulk.jpg" target="blank">
+		<div class="container">
+			<img src="https://i.ibb.co/dPV7mPh/hulk.jpg" alt="Hulk" border="0">
+			<div class="overlay">
+				<div class="title text">Hulk</div>
+			</div>
+		</div>
+		</a>
+		<a href="https://i.ibb.co/ScY21V2/vision.jpg" target="blank">
+		<div class="container">
+			<img src="https://i.ibb.co/ScY21V2/vision.jpg" alt="Vision" border="0">
+			<div class="overlay">
+				<div class="title text">Vision</div>
+			</div>
+		</div>
+		</a>
+		<a href="https://i.ibb.co/fv2RN9Y/antman.jpg" target="blank">
+		<div class="container">
+			<img src="https://i.ibb.co/fv2RN9Y/antman.jpg" alt="Ant Man" border="0">
+			<div class="overlay">
+				<div class="title text">Ant Man</div>
+			</div>
+		</div>
+		</a>
+		<a href="https://i.ibb.co/kB3YChb/winter-soldier.jpg" target="blank">
+		<div class="container">
+			<img src="https://i.ibb.co/kB3YChb/winter-soldier.jpg" alt="Winter Soldier" border="0">
+			<div class="overlay">
+				<div class="title text">Winter Soldier</div>
+			</div>
+		</div>
+		</a>
+		<a href="https://i.ibb.co/bvMMR5j/loki.jpg" target="blank">
+		<div class="container">
+			<img src="https://i.ibb.co/bvMMR5j/loki.jpg" alt="Loki" border="0">
+			<div class="overlay">
+				<div class="title text">Loki</div>
+			</div>
+		</div>
+		</a>
+		<a href="https://i.ibb.co/gzhKSLC/quicksilver.jpg" target="blank">
+		<div class="container">
+			<img src="https://i.ibb.co/gzhKSLC/quicksilver.jpg" alt="Quicksilver" border="0">
+			<div class="overlay">
+				<div class="title text">Quicksilver</div>
+			</div>
+		</div>
+		</a>
+		<a href="https://i.ibb.co/vqnsrXX/clint.jpg" target="blank">
+		<div class="container">
+			<img src="https://i.ibb.co/vqnsrXX/clint.jpg" alt="Hawkeye" border="0">
+			<div class="overlay">
+				<div class="title text">Hawkeye</div>
+			</div>
+		</div>
+		</a>
+		</div>
+	</div>	
+</body>
+</html>

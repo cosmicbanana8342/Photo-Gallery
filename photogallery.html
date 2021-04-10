@@ -4,100 +4,20 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Photo Gallery</title>
-	<style type="text/css">
-		body{
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	padding: 1%;
-	margin: 1%;
-
-}
-header{
-	height: 200px;
-	text-shadow: -2px -2px 2px #000fff;
-	background-color: #00000087;
-	font-family: serif;
-	color:#FFFFFF;
-	text-align: center;
-	margin: 2px auto;
-	padding-top: 15px;
-}
-h2{
-	text-shadow: -1px 1px 12px hsl(0deg 100% 50%);
-	font-family: serif;
-}
-.container {
-	display: inline-block;
-	margin: 2px;
-	margin-top: 8px;
-	border: solid 2px #FFFFFF;
-	width: 300px;
-	height: 300px;
-	border-radius: 10px;
-	cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-}
-.container .overlay {
-	background-color: #FFFFFF;
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #000000;
-    -webkit-transition: all 300ms ease-out;
-    -moz-transition: all 300ms ease-out;
-    -o-transition: all 300ms ease-out;
-    -ms-transition: all 300ms ease-out;
-    transition: all 300ms ease-out;
-    opacity: 0;
-    width: 300px;
-    height: 100px;
-    padding: 40% 0px;
-}
-.container:hover .overlay {
-	opacity: 0.5;
-}
-.container .text {
-	-webkit-transition: all 300ms ease-out;
-    -moz-transition: all 300ms ease-out;
-    -o-transition: all 300ms ease-out;
-    -ms-transition: all 300ms ease-out;
-    transition: all 300ms ease-out;
-    transform: translateY(30px);
-    -webkit-transform: translateY(30px);
-}
-.container .title {
-	font-size: 1.5em;
-    text-transform: uppercase;
-    opacity: 0;
-    transition-delay: 0.2s;
-    transition-duration: 0.3s;
-}
-.container:hover .title,
-.container:focus .title {
-	opacity: 1;
-    transform: translateY(0px);
-    -webkit-transform: translateY(0px);
-}
-img{
-	height: 100%;
-	width: auto;
-}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+	<script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
 </head>
 <body background="https://i.ibb.co/3WWbXFp/bg.jpg">
 	<header>
 		<div>
-			<h1>This Photo Gallery is created by <strong>Ashutosh Rai</strong></h1>
+			<h1>Photo Gallery</h1>
 			<h2>Marvel Heroes</h2>
-			<h3>Hover over images to see their names</h3>
+			<h3>Hover over images to see their names and click to enlarge image</h3>
 		</div>
 	</header>
 	<div align="center" class="images">
-		<a href="https://i.ibb.co/SXfHSw1/iron-man.jpg" target="blank">
+		<a href="https://i.ibb.co/SXfHSw1/iron-man.jpg" data-lightbox="mygallery" data-title="I AM IRON MAN">
 		<div class="container">
 			<img src="https://i.ibb.co/SXfHSw1/iron-man.jpg" alt="iron-man" border="0">
 			<div class="overlay">
@@ -105,7 +25,7 @@ img{
 			</div>
 		</div>
 		</a>
-		<a href="https://i.ibb.co/K5w9HZR/thor.jpg" target="blank">
+		<a href="https://i.ibb.co/K5w9HZR/thor.jpg" data-lightbox="mygallery" data-title="You people are so petty, and tiny.">
 		<div class="container">
 			<img src="https://i.ibb.co/K5w9HZR/thor.jpg" alt="thor" border="0">
 			<div class="overlay">
@@ -113,7 +33,7 @@ img{
 			</div>
 		</div>
 		</a>
-		<a href="https://i.ibb.co/pxDKGQY/captain-america.jpg" target="blank">
+		<a href="https://i.ibb.co/pxDKGQY/captain-america.jpg" data-lightbox="mygallery" data-title="I can do this all day.">
 		<div class="container">
 			<img src="https://i.ibb.co/pxDKGQY/captain-america.jpg" alt="Captain America" border="0">
 			<div class="overlay">
@@ -121,7 +41,7 @@ img{
 			</div>
 		</div>
 		</a>
-		<a href="https://i.ibb.co/sKCFcgx/dr-strange.jpg" target="blank">
+		<a href="https://i.ibb.co/sKCFcgx/dr-strange.jpg" data-lightbox="mygallery" data-title="Dormammu, I've Come To Bargain.">
 		<div class="container">
 			<img src="https://i.ibb.co/sKCFcgx/dr-strange.jpg" alt="Doctor Strange" border="0">
 			<div class="overlay">
@@ -129,7 +49,7 @@ img{
 			</div>
 		</div>
 		</a>
-		<a href="https://i.ibb.co/gvMdKDC/spidy.jpg" target="blank">
+		<a href="https://i.ibb.co/gvMdKDC/spidy.jpg" data-lightbox="mygallery" data-title="With great power comes great responsibilty">
 		<div class="container">
 			<img src="https://i.ibb.co/gvMdKDC/spidy.jpg" alt="Spiderman" border="0">
 			<div class="overlay">
@@ -137,7 +57,7 @@ img{
 			</div>
 		</div>
 		</a>
-		<a href="https://i.ibb.co/dPV7mPh/hulk.jpg" target="blank">
+		<a href="https://i.ibb.co/dPV7mPh/hulk.jpg" data-lightbox="mygallery" data-title="That’s my secret, Captain. I’m always angry.">
 		<div class="container">
 			<img src="https://i.ibb.co/dPV7mPh/hulk.jpg" alt="Hulk" border="0">
 			<div class="overlay">
@@ -145,7 +65,7 @@ img{
 			</div>
 		</div>
 		</a>
-		<a href="https://i.ibb.co/ScY21V2/vision.jpg" target="blank">
+		<a href="https://i.ibb.co/ScY21V2/vision.jpg" data-lightbox="mygallery" data-title="What is grief if love not persevering?">
 		<div class="container">
 			<img src="https://i.ibb.co/ScY21V2/vision.jpg" alt="Vision" border="0">
 			<div class="overlay">
@@ -153,7 +73,7 @@ img{
 			</div>
 		</div>
 		</a>
-		<a href="https://i.ibb.co/fv2RN9Y/antman.jpg" target="blank">
+		<a href="https://i.ibb.co/fv2RN9Y/antman.jpg" data-lightbox="mygallery" data-title="Shit! Thought it was a water truck. My bad!">
 		<div class="container">
 			<img src="https://i.ibb.co/fv2RN9Y/antman.jpg" alt="Ant Man" border="0">
 			<div class="overlay">
@@ -161,7 +81,7 @@ img{
 			</div>
 		</div>
 		</a>
-		<a href="https://i.ibb.co/kB3YChb/winter-soldier.jpg" target="blank">
+		<a href="https://i.ibb.co/kB3YChb/winter-soldier.jpg" data-lightbox="mygallery" data-title="What the world fails to realize is a villain is just a victim whose story hasn't been told.">
 		<div class="container">
 			<img src="https://i.ibb.co/kB3YChb/winter-soldier.jpg" alt="Winter Soldier" border="0">
 			<div class="overlay">
@@ -169,7 +89,7 @@ img{
 			</div>
 		</div>
 		</a>
-		<a href="https://i.ibb.co/bvMMR5j/loki.jpg" target="blank">
+		<a href="https://i.ibb.co/bvMMR5j/loki.jpg" data-lightbox="mygallery" data-title="Freedom is life's great lie, and once you accept that, you will know peace.">
 		<div class="container">
 			<img src="https://i.ibb.co/bvMMR5j/loki.jpg" alt="Loki" border="0">
 			<div class="overlay">
@@ -177,7 +97,7 @@ img{
 			</div>
 		</div>
 		</a>
-		<a href="https://i.ibb.co/gzhKSLC/quicksilver.jpg" target="blank">
+		<a href="https://i.ibb.co/gzhKSLC/quicksilver.jpg" data-lightbox="mygallery" data-title="You didn't see that coming?">
 		<div class="container">
 			<img src="https://i.ibb.co/gzhKSLC/quicksilver.jpg" alt="Quicksilver" border="0">
 			<div class="overlay">
@@ -185,7 +105,7 @@ img{
 			</div>
 		</div>
 		</a>
-		<a href="https://i.ibb.co/vqnsrXX/clint.jpg" target="blank">
+		<a href="https://i.ibb.co/vqnsrXX/clint.jpg" data-lightbox="mygallery" data-title="If we’re going to win this fight, some of us might have to lose it.">
 		<div class="container">
 			<img src="https://i.ibb.co/vqnsrXX/clint.jpg" alt="Hawkeye" border="0">
 			<div class="overlay">
